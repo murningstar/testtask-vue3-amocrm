@@ -41,7 +41,7 @@ async function dispatch() {
     const cleanedResponse: CreationLog = {
         name: data.name,
         type: data.type,
-        id: data.cmsResponse["_embedded"]['contacts'][0].id
+        id: data.cmsResponse["_embedded"][currentEndpoint.value!][0].id
     }
     creationLogs.pushLog(cleanedResponse)
 }
